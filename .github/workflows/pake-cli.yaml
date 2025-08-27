@@ -8,7 +8,7 @@ on:
         default: "macos-latest"
         type: choice
         options:
-          - "windows-2022"
+          - "windows-latest"
           - "macos-latest"
           - "ubuntu-24.04"
       url:
@@ -77,8 +77,8 @@ jobs:
           toolchain: stable
           target: x86_64-unknown-linux-musl
 
-      - name: Install Rust for windows-2022
-        if: inputs.platform == 'windows-2022'
+      - name: Install Rust for windows-latest
+        if: inputs.platform == 'windows-latest'
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable-x86_64-msvc
